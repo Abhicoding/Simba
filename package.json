@@ -2,9 +2,10 @@
   "name": "simba-css",
   "version": "1.0.0",
   "description": "A css library written is sass and named after the most sassy dog I know.",
-  "main": "index.js",
+  "main": "index.html",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "sass": "node ./node_modules/node-sass/bin/node-sass",
+    "build": "npm run sass ./src/scss/main.scss ./public/css/main.css"
   },
   "repository": {
     "type": "git",
