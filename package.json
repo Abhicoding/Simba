@@ -1,0 +1,26 @@
+{
+  "name": "simba-css",
+  "version": "1.0.0",
+  "description": "A css library written is sass and named after the most sassy dog I know.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Abhicoding/Simba-css.git"
+  },
+  "keywords": [
+    "sass",
+    "css"
+  ],
+  "author": "Abhishek Shingane",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Abhicoding/Simba-css/issues"
+  },
+  "homepage": "https://github.com/Abhicoding/Simba-css#readme",
+  "dependencies": {
+    "node-sass": "^4.9.3"
+  }
+}
