@@ -1,9 +1,6 @@
-.avatar-m {
-  border-radius: 50%;
-  width: 50px;
-}
-
-.avatar-s {
-  border-radius: 50%;
-  width: 30px;
+@each $i, $j in (s : 50px, m: 70px, l: 90px, xl: 120px) {
+  .avatar-#{$i} {
+    border-radius: 50%;
+    width: $j;
+  }
 }

@@ -4,7 +4,7 @@
   "description": "A css library written is sass and named after the most sassy dog I know.",
   "main": "index.html",
   "scripts": {
-    "sass": "node ./node_modules/node-sass/bin/node-sass",
+    "sass": "node ./node_modules/node-sass/bin/node-sass --watch --recursive",
     "build": "npm run sass ./src/scss/main.scss ./public/css/main.css"
   },
   "repository": {
