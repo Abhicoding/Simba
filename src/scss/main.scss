@@ -1,3 +1,7 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat|Open+Sans');
+
+@import 'avatar.scss';
+
 html, * {
     margin: 0;
     padding: 0;
@@ -5,5 +9,14 @@ html, * {
 }
 
 body {
-    background-color: Crimson;
+    font-family: 'Open Sans', 'Helvetica', 'sans-serif'
+}
+
+h1, h2, h3 {
+  font-family: 'Montserrat', 'sans-serif'
+}
+
+.grid-container {
+    display: grid;
+
 }
