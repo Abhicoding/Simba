@@ -1,0 +1,44 @@
+div.wrapper {
+  width: 100%;
+  background-color: #333;
+  line-height: 2rem;
+}
+
+nav.navbar {
+  display: flex;
+  justify-content: space-between
+}
+
+nav {
+  ul {
+    list-style-type: none;
+    a {
+      text-decoration: none;
+      color: #fff
+    }
+  }
+}
+
+nav ul li:hover {
+  background-color: #555;
+}
+
+nav > nav.end {
+  order: 3;
+  margin-right: 2%;
+}
+
+nav > nav.start {
+  order: 1;
+  margin-left: 2%;
+}
+
+nav > nav.center {
+  order: 2;
+  width: 40%;
+}
+
+nav > ul {
+  display: flex;
+  justify-content: space-evenly;
+}

@@ -15,20 +15,135 @@
   border-radius: 50%;
   width: 120px; }
 
-.button-l {
+.btn-medium-s {
+  color: #808080;
+  border: 1px solid #808080;
+  border-radius: 20px;
+  padding: 0.5% 1.25%;
+  font-weight: lighter;
+  font-size: 0.8rem;
+  opacity: 0.6; }
+
+.btn-medium-s:hover {
+  opacity: 1;
+  text-decoration: none;
+  color: #808080; }
+
+.btn-medium-m {
   color: #808080;
   border: 1px solid #808080;
   border-radius: 20px;
   padding: 0.5% 1.25%;
   font-weight: lighter;
   font-size: 0.9rem;
-  opacity: 0.6;
-  height: 10px; }
+  opacity: 0.6; }
 
-.button-l:hover {
+.btn-medium-m:hover {
   opacity: 1;
   text-decoration: none;
   color: #808080; }
+
+.btn-medium-l {
+  color: #808080;
+  border: 1px solid #808080;
+  border-radius: 20px;
+  padding: 0.5% 1.25%;
+  font-weight: lighter;
+  font-size: 1.1rem;
+  opacity: 0.6; }
+
+.btn-medium-l:hover {
+  opacity: 1;
+  text-decoration: none;
+  color: #808080; }
+
+.btn-twitter-s {
+  color: white;
+  border-radius: 3px;
+  padding: 0.5% 1.25%;
+  font-weight: bolder;
+  font-size: 0.8rem;
+  background-color: #D4321D; }
+
+.btn-twitter-s:hover {
+  text-decoration: none;
+  background-color: #B2321D; }
+
+.btn-twitter-m {
+  color: white;
+  border-radius: 3px;
+  padding: 0.5% 1.25%;
+  font-weight: bolder;
+  font-size: 0.9rem;
+  background-color: #D4321D; }
+
+.btn-twitter-m:hover {
+  text-decoration: none;
+  background-color: #B2321D; }
+
+.btn-twitter-l {
+  color: white;
+  border-radius: 3px;
+  padding: 0.5% 1.25%;
+  font-weight: bolder;
+  font-size: 1.1rem;
+  background-color: #D4321D; }
+
+.btn-twitter-l:hover {
+  text-decoration: none;
+  background-color: #B2321D; }
+
+div.wrapper {
+  width: 100%;
+  background-color: #333;
+  line-height: 2rem; }
+
+nav.navbar {
+  display: flex;
+  justify-content: space-between; }
+
+nav ul {
+  list-style-type: none; }
+  nav ul a {
+    text-decoration: none;
+    color: #fff; }
+
+nav ul li:hover {
+  background-color: #555; }
+
+nav > nav.end {
+  order: 3;
+  margin-right: 2%; }
+
+nav > nav.start {
+  order: 1;
+  margin-left: 2%; }
+
+nav > nav.center {
+  order: 2;
+  width: 40%; }
+
+nav > ul {
+  display: flex;
+  justify-content: space-evenly; }
+
+ul.dd-style-1 li {
+  display: none; }
+
+li:hover > ul.dd-style-1 li {
+  display: block; }
+
+ul.dd-style-2 li {
+  display: none; }
+
+li:hover > ul.dd-style-2 li {
+  display: block; }
+
+ul.dd-style-3 li {
+  display: none; }
+
+li:hover > ul.dd-style-3 li {
+  display: block; }
 
 html, * {
   margin: 0;

@@ -2,6 +2,8 @@
 
 @import 'avatar.scss';
 @import 'button.scss';
+@import 'navbar.scss';
+@import 'dropdown.scss';
 
 html, * {
     margin: 0;
@@ -19,5 +21,4 @@ h1, h2, h3 {
 
 .grid-container {
     display: grid;
-
 }

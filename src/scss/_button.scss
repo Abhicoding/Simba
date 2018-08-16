@@ -1,16 +1,31 @@
-.button-l {
+@each $i, $j in (s: 0.8, m: 0.9, l: 1.1) {
+  .btn-medium-#{$i} {
   color: #808080;
   border: 1px solid #808080;
   border-radius: 20px;
   padding: 0.5% 1.25%;
   font-weight: lighter;
-  font-size: 0.9rem;
+  font-size: #{$j}rem;
   opacity: 0.6;
-  height: 10px;
+  }
+  .btn-medium-#{$i}:hover {
+    opacity: 1;
+    text-decoration: none;
+    color: #808080
+  }
 }
 
-.button-l:hover {
-  opacity: 1;
-  text-decoration: none;
-  color: #808080
+@each $i, $j in (s: 0.8, m: 0.9, l: 1.1) {
+  .btn-twitter-#{$i} {
+    color:white;
+    border-radius: 3px;
+    padding:0.5% 1.25%;
+    font-weight: bolder;
+    font-size: #{$j}rem;
+    background-color: #D4321D;
+  }
+  .btn-twitter-#{$i}:hover {
+    text-decoration: none;
+    background-color:#B2321D;
+  }
 }
