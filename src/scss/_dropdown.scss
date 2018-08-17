@@ -2,7 +2,7 @@ li:hover {
   text-align: center;
 }
 
-@for $i from 1 to 4 {
+@for $i from 1 through 4 {
   ul.dd-style-#{$i} {
     position: absolute;
   }
@@ -24,36 +24,102 @@ li:hover {
       width: 100%;
       text-align: left;
       padding: 5%;
-    
+      background-color: rgba(200,200,200,0.7);
       @if $i == 1 {
         opacity: 0;
-        -moz-animation: {
-          name: menu#{$i};
+        animation: {
+          name: menu1;
+          duration: 300ms;
+          timing-function: ease-in-out;
+          fill-mode: forwards;
+        }
+      } @else if $i == 2 {
+        opacity: 0;
+        animation: {
+          name: menu2;
           duration: 500ms;
           timing-function: ease-in-out;
           fill-mode: forwards;
         }        
+      } @else if $i == 3 {
+        opacity: 0;
+        @for $k from 1 to 8 {
+          &:nth-child(#{$k}) {
+            animation: {
+              name: menu3; 
+              duration: 300ms * $k;
+              timing-function: ease-in-out;
+              fill-mode: forwards;
+            }
+          }
+        }
+      } @else if $i == 4 {
+        opacity: 0;
+        transform-origin: top-right;
+        @for $k from 1 to 8 {
+          &:nth-child(#{$k}) {
+            animation: {
+              name: menu4; 
+              duration: 200ms * $k;
+              timing-function: ease-in-out;
+              fill-mode: forwards;
+            }
+          }
+        }
       }
     }
     @if $i == 1 {
-      @keyframes menu#{$i} {
+      @keyframes menu1 {
+        0% {
+          opacity: 0;
+          transform: translateY(-20%)
+        }
+        100%{
+          opacity: 1;
+          transform: translateY(0%)
+        }
+      }
+    }
+    @else if $i == 2 {
+      @keyframes menu2 {
         0% {
           opactiy: 0;
-          transform: translateY(20%)
-          // rotateY(-90); 
-          // translateY(-20%);
+          transform: rotateY(-90deg) translateY(-20%);
         }
         100% {
           opacity: 1;
-          transform: translateY(0);
-          // rotateY(0);
-          // translateY(0%);
+          transform: rotateY(0) translateY(0%);
+        }
+      }
+    } @else if $i == 3 {
+      @keyframes menu3 {
+        0% {
+          opacity: 0;
+          transform: scale(0.3) translateY(-20%)
+        }
+        80% {
+          transform: scale(1.2)
+        } 
+        100% {
+          opacity: 1;
+          transform: scale(1) translateY(0%)
+        }
+      }
+    } @else {
+      @keyframes menu4 {
+        0% {
+          opacity: 0;
+          transform: rotate(-30deg) translateX(20%);
+        }
+        100%{
+          opacity: 1;
+          transform: rotate(0deg) translateX(0%);
         }
       }
     }
     
     li:hover {
-      background-color: rgba(150,150,150,0.7);
+      background-color:#FFBC00;
     }
   }
 }
