@@ -27,21 +27,11 @@ li:hover {
     
       @if $i == 1 {
         opacity: 0;
-        animation: {
+        -moz-animation: {
           name: menu#{$i};
           duration: 500ms;
           timing-function: ease-in-out;
           fill-mode: forwards;
-        }
-        @keyframes menu#{$i} {
-          0% {
-            opactiy: 0;
-            transform: rotateY(-90)translateY(-20%)
-          }
-          100% {
-            opacity: 1;
-            transform: rotateY(0)translateY(0%)
-          }
         }        
       }
     }
@@ -49,11 +39,15 @@ li:hover {
       @keyframes menu#{$i} {
         0% {
           opactiy: 0;
-          transform: rotateY(-90)translateY(-20%)
+          transform: translateY(20%)
+          // rotateY(-90); 
+          // translateY(-20%);
         }
         100% {
           opacity: 1;
-          transform: rotateY(0)translateY(0%)
+          transform: translateY(0);
+          // rotateY(0);
+          // translateY(0%);
         }
       }
     }

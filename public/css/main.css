@@ -166,26 +166,18 @@ li:hover > ul.dd-style-1 {
     text-align: left;
     padding: 5%;
     opacity: 0;
-    animation-name: menu1;
-    animation-duration: 500ms;
-    animation-timing-function: ease-in-out;
-    animation-fill-mode: forwards; }
+    -moz-animation-name: menu1;
+    -moz-animation-duration: 500ms;
+    -moz-animation-timing-function: ease-in-out;
+    -moz-animation-fill-mode: forwards; }
 
 @keyframes menu1 {
   0% {
     opactiy: 0;
-    transform: rotateY(-90) translateY(-20%); }
+    transform: translateY(20%); }
   100% {
     opacity: 1;
-    transform: rotateY(0) translateY(0%); } }
-
-@keyframes menu1 {
-  0% {
-    opactiy: 0;
-    transform: rotateY(-90) translateY(-20%); }
-  100% {
-    opacity: 1;
-    transform: rotateY(0) translateY(0%); } }
+    transform: translateY(0); } }
   li:hover > ul.dd-style-1 li:hover {
     background-color: rgba(150, 150, 150, 0.7); }
 
