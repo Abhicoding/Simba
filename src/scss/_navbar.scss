@@ -4,41 +4,72 @@ div.wrapper {
   line-height: 2rem;
 }
 
-nav.navbar {
-  display: flex;
-  justify-content: space-between
-}
-
-nav {
-  ul {
-    list-style-type: none;
-    a {
-      text-decoration: none;
-      color: #fff
+@media screen and (min-width: 768px) {
+  nav.navbar {
+    display: flex;
+    justify-content: space-between;
+    nav {
+      ul {
+        list-style-type: none;
+        display: flex;
+        justify-content: space-evenly;
+        a {
+          text-decoration: none;
+          color: #fff
+        }
+        li:hover {
+          background-color: #555;
+        }
+      }
+    }
+    nav.start {
+      margin-left: 2%;
+    }
+    nav.center {
+      width: 40%;
+    }
+    nav.end {
+      margin-right: 2%;
     }
   }
 }
 
-nav ul li:hover {
-  background-color: #555;
+@media screen and (max-width: 767px) {
+  nav.navbar {
+    display: flex;
+    flex-flow: column;
+    justify-content: space-between;
+    nav {
+      ul {
+        list-style-type: none;
+        display: flex;
+        justify-content: space-evenly;
+        a {
+          text-decoration: none;
+          color: #fff
+        }
+        li:hover {
+          background-color: #555;
+        }
+      }
+    }
+  }
 }
 
-nav > nav.end {
-  order: 3;
-  margin-right: 2%;
-}
-
-nav > nav.start {
-  order: 1;
-  margin-left: 2%;
-}
-
-nav > nav.center {
-  order: 2;
-  width: 40%;
-}
-
-nav > ul {
-  display: flex;
-  justify-content: space-evenly;
+@each $i, $j in (start: 1, center: 2, end: 3) {
+  @if $i == start {
+    nav > nav.#{$i} {
+      order: $j;
+    }
+  }
+  @else if $i == center {
+    nav > nav.#{$i} {
+      order: $j;
+    }
+  }
+  @else {
+    nav > nav.#{$i} {
+      order: $j;
+    }
+  }
 }
