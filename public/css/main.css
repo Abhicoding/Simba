@@ -109,6 +109,8 @@ div.wrapper {
       nav.navbar nav ul a {
         text-decoration: none;
         color: #fff; }
+      nav.navbar nav ul li {
+        padding: 0.5rem; }
       nav.navbar nav ul li:hover {
         background-color: #555; }
     nav.navbar nav.start {
