@@ -1,0 +1,19 @@
+@for $i from 3 through 9 {
+  @each $_, $j in (half: 0.5, one: 1){
+    div.grid-container-#{$i*50}-#{$_} {
+    margin: #{$j}rem;
+    justify-content: space-evenly;
+    display: grid;
+    grid-gap: #{$j}rem;
+    grid-template-columns: repeat(auto-fill, minmax($i*50px, 1fr));
+    }
+
+    div.item {
+    box-sizing: border-box;
+    float: left;
+    padding: 0.5rem;
+    border: 0.1rem solid;
+    border-radius: 0.4rem;
+    }
+  }
+}
